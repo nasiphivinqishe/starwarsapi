@@ -103,19 +103,20 @@ const People = ({ setDisplayedComponent, setPersonDetailsData }) => {
         ))}
       </div>
 
-      <Pagination
-        props={[
-          setPagination,
-          setCurrentPath,
-          previousPath,
-          nextPath,
-          searching,
-          pagination,
-          peopleCouter,
-          setLoading,
-          currentPath,
-        ]}
-      />
+      <div className="w3-center">
+        <Pagination
+          props={[
+            setPagination,
+            setCurrentPath,
+            previousPath,
+            nextPath,
+            searching,
+            pagination,
+            peopleCouter,
+            setLoading,
+            currentPath,
+          ]}
+        /></div>
     </div>
   );
 };

@@ -7,6 +7,16 @@ const useStyles = makeStyles((theme) =>
     hidden: {
       display: "none",
     },
+    paginationContainer: {
+      marginRight: "+45px",
+      marginLeft: "+45px",
+      position: "absolute",
+      bottom: "-.3%",
+      background: "#9e9e9e",
+      color: "white !important",
+      left: "0",
+      right: "0"
+    }
   })
 );
 
@@ -54,8 +64,8 @@ const Pagination = ({ props }) => {
     <div
       className={`${searching ? styleClasses.hidden : styleClasses.display}`}
     >
-      <div className="w3-container">
-        <div className="w3-bar w3-border">
+      <div className="w3-container" >
+        <div className={`w3-bar w3-border" ${styleClasses.paginationContainer}`}>
           <span
             style={{ display: pagination[0] == 1 ? "none" : "inline" }}
             className="w3-bar-item w3-button"
@@ -88,7 +98,7 @@ const Pagination = ({ props }) => {
           <span className="w3-bar-item w3-right">Total: {peopleCouter}</span>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
